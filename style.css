@@ -1,0 +1,149 @@
+body {
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .container {
+        margin: 200px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-height: 450px;
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        color: rgba(235,235,235,100);
+        border-radius: 10px;
+        box-shadow: 0px  0px 30px 5px rgba(51, 51, 51, .5); /*right, down, blur sizre, all sizes toghether  */
+        /* font-size: 14px; */
+        /* background:#ffffff; */
+        display: grid;
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-rows: 115px repeat(5, 1fr);
+     
+
+
+        grid-template-areas:
+            "dspl dspl dspl dspl"
+            "topPanel topPanel topPanel sidePanel"
+            "num num num sidePanel"
+            "num num num sidePanel"
+            "num num num sidePanel"
+            "num num num sidePanel";
+        }
+
+
+            .display {
+                background:rgb(56, 56, 56);
+                display: grid;
+                grid-area: dspl;
+                text-align: right;
+                align-items: center;
+                padding-right: 23px;
+                padding-top: 45px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                font-size: 42px;
+                border: 0.01em solid rgba(104, 103, 103, 0.9);
+                margin-top: -1px;
+                margin-right: -1px;
+            }
+
+            .topPanelContainer {
+                background:rgb(76, 76, 76);
+                display: grid;
+                grid-area: topPanel;
+                grid-template-columns: repeat(3, 6.5vh);
+                grid-template-rows: 1fr;
+                text-align: center;
+            }
+                
+                .topPanelItem:active {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+
+                .topPanelItem {
+                    /* background: PaleGreen; */
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: -1px; 
+                    margin-right: -1px;
+                    /* in order to ship "repeated border line do this https://stackoverflow.com/questions/12692089/preventing-double-borders-in-css" */
+                    border: 0.01em solid rgba(62, 62, 62, 0.9);
+                }
+
+            .sidePanelContainer {
+                background:rgb(242, 163, 60);
+                display: grid;
+                grid-area: sidePanel;
+                grid-template-columns: 6.5vh;
+                grid-template-rows: repeat(5, 1fr);
+                text-align: center;
+                border-bottom-right-radius: 10px;
+                
+            }
+
+                .sidePanelItem:active {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+
+                .sidePanelItem {
+                    margin-top: -1px;
+                    margin-right: -1px;
+                    border: 0.01em solid rgba(62, 62, 62, 0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                #equals {
+                    margin-top: -1px;
+                    margin-right: -1px;
+                    border-bottom-right-radius: 10px;
+                    border: 0.01em solid rgba(62, 62, 62, 0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            .numContainer {
+                background:rgb(105, 105, 105);
+                display: grid;
+                grid-area: num;
+                grid-template-columns: repeat(3, 6.5vh);
+                grid-template-rows: repeat(4, 1fr);
+                text-align: center;
+                border-bottom-left-radius: 10px;
+                
+                /* border: 0.01em solid rgba(62, 62, 62, 0.8); */
+            }
+
+                .numItem:active {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+
+                .numItem {
+                    margin-top: -1px;
+                    margin-right: -1px;
+                    border: 1px solid rgba(62, 62, 62, 0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                #zeroItem {
+                    /* background: PaleGreen; */
+                    margin-top: -1px;
+                    margin-right: -1px;
+                    border-bottom-left-radius: 10px;
+                    border: 0.01em solid rgba(62, 62, 62, 0.9);
+                    grid-column: 1 / 3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            
